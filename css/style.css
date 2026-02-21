@@ -689,9 +689,13 @@ body {
 /* =====================================================
    Responsive tweaks
    ===================================================== */
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   body {
     font-size: 16px;
+  }
+
+  #hero {
+    min-height: auto;
   }
 }
 
