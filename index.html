@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="家族の思い出が詰まった実家を、丁寧にお買取りします。地元密着の〇〇不動産が最短1週間で対応。仲介手数料0円。無料査定受付中。">
+  <title>実家・空き家の不動産買取｜〇〇不動産</title>
+
+  <!-- Tailwind CSS Custom Config (must be before CDN) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-green':  '#2D5A3D',
+            'brand-dark':   '#1E3D2A',
+            'brand-deep':   '#0D1F13',
+            'brand-accent': '#4A8C5C',
+            'brand-cta':    '#D4622A',
+            'brand-bg':     '#F5F5F0',
+          },
+          fontFamily: {
+            'sans-jp':  ['"Noto Sans JP"', '"Hiragino Sans"', 'sans-serif'],
+            'serif-jp': ['"Noto Serif JP"', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts (Japanese) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans-jp">
+
+<!-- ============================================================
+     MOBILE MENU OVERLAY
+     ============================================================ -->
+<div id="menu-overlay"
+     class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none"
+     aria-hidden="true"></div>
+
+<!-- Mobile Drawer -->
+<nav id="mobile-menu"
+     class="fixed top-0 right-0 h-full w-80 max-w-full bg-white z-50 translate-x-full shadow-2xl flex flex-col"
+     role="dialog" aria-label="メニュー">
+  <div class="flex items-center justify-between p-5 border-b border-gray-100">
+    <span class="font-serif-jp font-bold text-brand-green text-lg">〇〇不動産</span>
+    <button id="close-menu"
+            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+            aria-label="メニューを閉じる">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M3 3L17 17M17 3L3 17" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <ul class="flex flex-col py-4 px-4 gap-1 flex-1 overflow-y-auto">
+    <li><a href="#features"   class="block px-4 py-3.5 rounded-lg text-[17px] font-bold text-gray-700 hover:bg-green-50 hover:text-brand-green transition-colors">買取の特徴</a></li>
+    <li><a href="#comparison" class="block px-4 py-3.5 rounded-lg text-[17px] font-bold text-gray-700 hover:bg-green-50 hover:text-brand-green transition-colors">他社との違い</a></li>
+    <li><a href="#flow"       class="block px-4 py-3.5 rounded-lg text-[17px] font-bold text-gray-700 hover:bg-green-50 hover:text-brand-green transition-colors">買取の流れ</a></li>
+    <li><a href="#faq"        class="block px-4 py-3.5 rounded-lg text-[17px] font-bold text-gray-700 hover:bg-green-50 hover:text-brand-green transition-colors">よくある質問</a></li>
+    <li><a href="#company"    class="block px-4 py-3.5 rounded-lg text-[17px] font-bold text-gray-700 hover:bg-green-50 hover:text-brand-green transition-colors">会社紹介</a></li>
+    <li><a href="#contact"    class="block px-4 py-3.5 rounded-lg text-[17px] font-bold text-gray-700 hover:bg-green-50 hover:text-brand-green transition-colors">お問い合わせ</a></li>
+  </ul>
+  <div class="p-4 border-t border-gray-100 space-y-3">
+    <a href="tel:0952-XX-XXXX"
+       class="flex items-center justify-center gap-2 w-full py-3.5 rounded-lg border-2 border-brand-green text-brand-green font-bold text-[16px] hover:bg-green-50 transition-colors">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      電話で相談する
+    </a>
+    <a href="#contact" class="btn-cta w-full">無料相談はこちら</a>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+
+<main>
+
+<!-- ============================================================
+     #1  HERO
+     ============================================================ -->
+<section id="hero" aria-label="ファーストビュー">
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content w-full pt-10 md:pt-16 pb-56 md:pb-64 px-5 sm:px-8">
+    <div class="max-w-3xl mx-auto text-center text-white">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-full px-4 py-1.5 text-sm font-bold mb-6 tracking-wide fade-in">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="opacity-80">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        佐賀県内 地元密着の不動産買取
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif-jp font-bold text-white leading-snug mb-5 fade-in delay-1"
+          style="font-size: clamp(1.75rem, 5vw, 3rem);">
+        家族の思い出が詰まった実家を、<br>
+        <span class="text-green-300">丁寧に</span>お買取りします。
+      </h1>
+
+      <!-- Sub Headline -->
+      <p class="text-white text-opacity-85 text-lg sm:text-xl leading-relaxed mb-8 fade-in delay-2"
+         style="color: rgba(255,255,255,0.85);">
+        相談から買取まで、地元密着のプロが丁寧にサポートします。<br class="hidden sm:block">
+        まずはお気軽に、無料でご相談ください。
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in delay-3">
+        <a href="#contact" class="btn-cta text-lg px-8 py-4 w-full sm:w-auto">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+          </svg>
+          無料で相談する
+        </a>
+        <a href="tel:0952-XX-XXXX" class="btn-outline-white text-lg px-8 py-4 w-full sm:w-auto">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          0952-XX-XXXX（無料）
+        </a>
+      </div>
+
+      <p class="text-xs mt-4 fade-in delay-4" style="color: rgba(255,255,255,0.5);">
+        受付時間：9:00〜18:00（土日・祝日も対応）
+      </p>
+    </div>
+  </div>
+
+  <!-- SVG Landscape (decorative) -->
+  <div class="hero-landscape" aria-hidden="true">
+    <svg viewBox="0 0 1440 380" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+      <!-- Distant mountains (faint) -->
+      <path d="M0,280 L100,220 L200,260 L340,170 L480,240 L600,150 L720,210 L840,140 L960,200 L1080,160 L1200,210 L1320,175 L1440,220 L1440,380 L0,380Z"
+            fill="#1A3020" opacity="0.45"/>
+      <!-- Mid mountains -->
+      <path d="M0,320 L90,265 L200,300 L330,238 L460,285 L580,220 L700,272 L820,235 L940,290 L1060,255 L1180,295 L1310,268 L1440,300 L1440,380 L0,380Z"
+            fill="#1E3A28" opacity="0.65"/>
+      <!-- Near hills -->
+      <path d="M0,350 L180,325 L360,342 L540,318 L720,338 L900,320 L1080,340 L1260,328 L1440,345 L1440,380 L0,380Z"
+            fill="#162B1E" opacity="0.85"/>
+
+      <!-- Left pine trees -->
+      <g fill="#0C1A10">
+        <polygon points="50,375 72,308 94,375"/><polygon points="55,348 72,296 89,348"/><polygon points="59,323 72,288 85,323"/>
+        <rect x="69" y="375" width="6" height="8"/>
+        <polygon points="100,375 128,298 156,375"/><polygon points="107,347 128,286 149,347"/><polygon points="112,320 128,278 144,320"/>
+        <rect x="124" y="375" width="8" height="8"/>
+        <polygon points="168,375 188,325 208,375"/><polygon points="172,355 188,316 204,355"/>
+        <rect x="185" y="375" width="6" height="8"/>
+      </g>
+
+      <!-- Right pine trees -->
+      <g fill="#0C1A10">
+        <polygon points="1246,375 1268,308 1290,375"/><polygon points="1251,348 1268,296 1285,348"/><polygon points="1255,323 1268,288 1281,323"/>
+        <rect x="1265" y="375" width="6" height="8"/>
+        <polygon points="1296,375 1318,305 1340,375"/><polygon points="1302,348 1318,293 1334,348"/><polygon points="1306,321 1318,285 1330,321"/>
+        <rect x="1315" y="375" width="6" height="8"/>
+        <polygon points="1358,375 1378,328 1398,375"/><polygon points="1362,355 1378,318 1394,355"/>
+        <rect x="1375" y="375" width="6" height="8"/>
+      </g>
+
+      <!-- House (center) -->
+      <g transform="translate(695, 240)" fill="#0C1A10">
+        <rect x="-55" y="0" width="110" height="100"/>
+        <polygon points="-75,-8 0,-72 75,-8"/>
+        <rect x="28" y="-72" width="14" height="40"/>
+        <rect x="-12" y="52" width="24" height="48"/>
+        <rect x="-46" y="14" width="30" height="25"/>
+        <rect x="16"  y="14" width="30" height="25"/>
+        <line x1="-31" y1="14" x2="-31" y2="39" stroke="#162B1E" stroke-width="1.5"/>
+        <line x1="-46" y1="26" x2="-16" y2="26" stroke="#162B1E" stroke-width="1.5"/>
+        <line x1="31"  y1="14" x2="31"  y2="39" stroke="#162B1E" stroke-width="1.5"/>
+        <line x1="16"  y1="26" x2="46"  y2="26" stroke="#162B1E" stroke-width="1.5"/>
+      </g>
+
+      <!-- Ground -->
+      <path d="M0,372 Q720,365 1440,372 L1440,380 L0,380Z" fill="#0A1710"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     STATS BAR
+     ============================================================ -->
+<section aria-label="実績" class="bg-white border-b border-gray-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="grid grid-cols-3 divide-x divide-gray-100">
+      <div class="stat-item fade-in">
+        <div class="stat-number">500<span class="text-2xl">件+</span></div>
+        <div class="stat-label">累計買取実績</div>
+      </div>
+      <div class="stat-item fade-in delay-1">
+        <div class="stat-number">最短<span class="text-2xl ml-1">1週間</span></div>
+        <div class="stat-label">決済スピード</div>
+      </div>
+      <div class="stat-item fade-in delay-2">
+        <div class="stat-number">0<span class="text-2xl">円</span></div>
+        <div class="stat-label">仲介手数料</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #2  PROBLEMS — お悩み提示
+     ============================================================ -->
+<section id="problems" aria-label="お悩み提示"
+         style="background: linear-gradient(160deg, #1A2E20 0%, #1E3828 60%, #243D2C 100%);"
+         class="py-20 md:py-28 relative">
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-12 fade-in">
+      <div class="section-label" style="background:rgba(74,140,92,0.2); color:#7AB88A;">
+        こんな方へ
+      </div>
+      <h2 class="section-title section-title-white title-deco" style="color:#fff;">
+        こんなお悩みはありませんか？
+      </h2>
+      <p class="mt-4 text-green-200 text-opacity-80" style="color:rgba(187,220,198,0.8);">
+        「何から始めればいいかわからない」という方も、まずはご相談ください。
+      </p>
+    </div>
+
+    <!-- Problem Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="problem-card fade-in delay-1">
+        <div class="problem-icon" aria-hidden="true">🏚️</div>
+        <div>
+          <p class="font-bold text-white text-base sm:text-lg leading-snug mb-1">実家が空き家になって、<br>管理が大変…</p>
+          <p class="text-sm sm:text-base" style="color:rgba(187,220,198,0.7);">遠方から管理に通う手間と費用が負担に</p>
+        </div>
+      </div>
+      <div class="problem-card fade-in delay-2">
+        <div class="problem-icon" aria-hidden="true">📍</div>
+        <div>
+          <p class="font-bold text-white text-base sm:text-lg leading-snug mb-1">遠方に住んでいて、<br>なかなか手が付けられない…</p>
+          <p class="text-sm sm:text-base" style="color:rgba(187,220,198,0.7);">仕事や家庭で時間が取れない</p>
+        </div>
+      </div>
+      <div class="problem-card fade-in delay-3">
+        <div class="problem-icon" aria-hidden="true">❓</div>
+        <div>
+          <p class="font-bold text-white text-base sm:text-lg leading-snug mb-1">不動産売却って難しそうで、<br>何から始めれば…</p>
+          <p class="text-sm sm:text-base" style="color:rgba(187,220,198,0.7);">書類・手続きが複雑でわからない</p>
+        </div>
+      </div>
+      <div class="problem-card fade-in delay-1">
+        <div class="problem-icon" aria-hidden="true">😔</div>
+        <div>
+          <p class="font-bold text-white text-base sm:text-lg leading-snug mb-1">仲介では売れなかった、<br>もう諦めていた…</p>
+          <p class="text-sm sm:text-base" style="color:rgba(187,220,198,0.7);">古い・遠い・状態が悪いと断られた</p>
+        </div>
+      </div>
+      <div class="problem-card fade-in delay-2">
+        <div class="problem-icon" aria-hidden="true">📋</div>
+        <div>
+          <p class="font-bold text-white text-base sm:text-lg leading-snug mb-1">相続した土地・家を<br>どうすればいいか分からない…</p>
+          <p class="text-sm sm:text-base" style="color:rgba(187,220,198,0.7);">相続手続きもあわせて相談したい</p>
+        </div>
+      </div>
+      <div class="problem-card fade-in delay-3">
+        <div class="problem-icon" aria-hidden="true">💴</div>
+        <div>
+          <p class="font-bold text-white text-base sm:text-lg leading-snug mb-1">固定資産税の支払いが<br>毎年の負担になっている…</p>
+          <p class="text-sm sm:text-base" style="color:rgba(187,220,198,0.7);">使わない不動産でも税金はかかり続ける</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <div class="text-center mt-12 fade-in">
+      <p class="font-serif-jp font-bold text-xl sm:text-2xl md:text-3xl text-white mb-6">
+        そのお悩み、私たちにお任せください。
+      </p>
+      <a href="#contact" class="btn-cta text-lg px-8 py-4">まずは無料で相談する</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #3  FEATURES — 不動産買取の特徴
+     ============================================================ -->
+<section id="features" aria-label="買取の特徴" class="py-20 md:py-28"
+         style="background-color: #F5F5F0;">
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-14 fade-in">
+      <div class="section-label">選ばれる理由</div>
+      <h2 class="section-title title-deco">
+        〇〇不動産が<br class="sm:hidden">選ばれる理由
+      </h2>
+    </div>
+
+    <!-- Feature Cards (2×2 → 4-col on xl) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+
+      <!-- Feature 1 -->
+      <div class="feature-card fade-in delay-1">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2D5A3D" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="font-serif-jp font-bold text-xl sm:text-2xl text-brand-dark mb-3">最短1週間で<br>お買取り</h3>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+          ご連絡から現地査定・買取金額のご提示まで、スピーディに対応。
+          お急ぎの方も安心です。
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card fade-in delay-2">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2D5A3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3 class="font-serif-jp font-bold text-xl sm:text-2xl text-brand-dark mb-3">仲介手数料<br>0円</h3>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+          売却にかかる費用は一切不要。査定・相談もすべて無料でご利用いただけます。
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card fade-in delay-3">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2D5A3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+        </div>
+        <h3 class="font-serif-jp font-bold text-xl sm:text-2xl text-brand-dark mb-3">どんな状態でも<br>OK</h3>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+          築古・雨漏り・汚家・ゴミ屋敷状態でも対応可能。リフォームは一切不要です。
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card fade-in delay-4">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2D5A3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="font-serif-jp font-bold text-xl sm:text-2xl text-brand-dark mb-3">佐賀県内<br>全域対応</h3>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+          佐賀市はもちろん、唐津・鹿島・嬉野など県内どこでも無料で出張査定します。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #4  COMPARISON — 他社との違い
+     ============================================================ -->
+<section id="comparison" aria-label="他社との違い" class="py-20 md:py-28 bg-white">
+
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-12 fade-in">
+      <div class="section-label">比較</div>
+      <h2 class="section-title title-deco">仲介売却との比較</h2>
+      <p class="mt-5 text-gray-600 text-base sm:text-lg">
+        買取と仲介では、プロセスも結果も大きく異なります。
+      </p>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto rounded-xl fade-in delay-1">
+      <table class="comparison-table" aria-label="買取と仲介の比較表">
+        <thead>
+          <tr>
+            <th class="col-label" style="background:#EDEEE8; color:#1E3D2A; text-align:left; padding:1.125rem 1.25rem;">比較項目</th>
+            <th class="col-company" style="background:#2D5A3D; color:#fff; padding:1.125rem 1.25rem;">
+              <div class="flex items-center justify-center gap-1.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                当社買取
+              </div>
+            </th>
+            <th style="background:#F3F4EE; color:#555; padding:1.125rem 1.25rem;">一般仲介</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-label" style="text-align:left; font-weight:700; color:#1E3D2A; background:#F8F9F6;">売却期間</td>
+            <td class="col-company"><span class="check">✓</span><br><span class="text-sm font-bold text-brand-dark">最短1週間</span></td>
+            <td><span class="cross">—</span><br><span class="text-sm text-gray-500">3〜6ヶ月以上</span></td>
+          </tr>
+          <tr>
+            <td class="col-label" style="text-align:left; font-weight:700; color:#1E3D2A; background:#F8F9F6;">仲介手数料</td>
+            <td class="col-company"><span class="check">✓</span><br><span class="text-sm font-bold text-brand-dark">完全無料</span></td>
+            <td><span class="cross">×</span><br><span class="text-sm text-gray-500">売却額の3%+6万円</span></td>
+          </tr>
+          <tr>
+            <td class="col-label" style="text-align:left; font-weight:700; color:#1E3D2A; background:#F8F9F6;">内覧対応</td>
+            <td class="col-company"><span class="check">✓</span><br><span class="text-sm font-bold text-brand-dark">不要</span></td>
+            <td><span class="cross">×</span><br><span class="text-sm text-gray-500">複数回必要</span></td>
+          </tr>
+          <tr>
+            <td class="col-label" style="text-align:left; font-weight:700; color:#1E3D2A; background:#F8F9F6;">リフォーム</td>
+            <td class="col-company"><span class="check">✓</span><br><span class="text-sm font-bold text-brand-dark">不要</span></td>
+            <td><span class="cross">△</span><br><span class="text-sm text-gray-500">必要な場合あり</span></td>
+          </tr>
+          <tr>
+            <td class="col-label" style="text-align:left; font-weight:700; color:#1E3D2A; background:#F8F9F6;">引き渡し時期</td>
+            <td class="col-company"><span class="check">✓</span><br><span class="text-sm font-bold text-brand-dark">自由に設定可</span></td>
+            <td><span class="cross">—</span><br><span class="text-sm text-gray-500">契約後に調整</span></td>
+          </tr>
+          <tr>
+            <td class="col-label" style="text-align:left; font-weight:700; color:#1E3D2A; background:#F8F9F6;">近所への配慮</td>
+            <td class="col-company"><span class="check">✓</span><br><span class="text-sm font-bold text-brand-dark">知られずに完了</span></td>
+            <td><span class="cross">×</span><br><span class="text-sm text-gray-500">広告・チラシあり</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-gray-400 mt-4 text-center">※条件により異なる場合があります。詳細はご相談ください。</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #5  FLOW — 買取の流れ
+     ============================================================ -->
+<section id="flow" aria-label="買取の流れ"
+         class="py-20 md:py-28"
+         style="background: linear-gradient(180deg, #EBF2ED 0%, #F5F5F0 100%);">
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-14 fade-in">
+      <div class="section-label">プロセス</div>
+      <h2 class="section-title title-deco">買取の流れ</h2>
+      <p class="mt-4 text-gray-500">最短1週間でお引き渡し・お支払い完了</p>
+    </div>
+
+    <!-- Steps (desktop: flex row / mobile: flex col) -->
+    <!-- Desktop layout -->
+    <div class="hidden md:flex items-start gap-0 fade-in delay-1">
+
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="text-xs font-bold text-brand-accent mb-1 tracking-wider">STEP 1</div>
+        <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-2">無料相談</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          電話またはフォームでお問い合わせください。担当者が丁寧にお答えします。
+        </p>
+      </div>
+
+      <div class="step-arrow">›</div>
+
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="text-xs font-bold text-brand-accent mb-1 tracking-wider">STEP 2</div>
+        <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-2">現地査定</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          無料で現地へ出張。不動産の状態を確認し、精度の高い査定をいたします。
+        </p>
+      </div>
+
+      <div class="step-arrow">›</div>
+
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="text-xs font-bold text-brand-accent mb-1 tracking-wider">STEP 3</div>
+        <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-2">買取額のご提示</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          査定後、買取金額をご提示します。納得いただいてからのご判断でOK。
+        </p>
+      </div>
+
+      <div class="step-arrow">›</div>
+
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="text-xs font-bold text-brand-accent mb-1 tracking-wider">STEP 4</div>
+        <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-2">売買契約</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          金額・条件にご同意いただきましたら、売買契約を締結します。
+        </p>
+      </div>
+
+      <div class="step-arrow">›</div>
+
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <div class="text-xs font-bold text-brand-accent mb-1 tracking-wider">STEP 5</div>
+        <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-2">お引き渡し・<br>お支払い</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          ご都合に合わせた日程で引き渡し。その場でお支払い（振込）完了です。
+        </p>
+      </div>
+    </div>
+
+    <!-- Mobile layout (vertical) -->
+    <div class="md:hidden flex flex-col gap-4">
+      <div class="flow-step fade-in delay-1">
+        <div class="step-num">1</div>
+        <div class="flow-step-content">
+          <div class="text-xs font-bold text-brand-accent mb-0.5 tracking-wider">STEP 1</div>
+          <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-1">無料相談</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">電話またはフォームでお問い合わせください。担当者が丁寧にお答えします。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-in delay-2">
+        <div class="step-num">2</div>
+        <div class="flow-step-content">
+          <div class="text-xs font-bold text-brand-accent mb-0.5 tracking-wider">STEP 2</div>
+          <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-1">現地査定（無料）</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">無料で現地へ出張。不動産の状態を確認し、精度の高い査定をいたします。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-in delay-3">
+        <div class="step-num">3</div>
+        <div class="flow-step-content">
+          <div class="text-xs font-bold text-brand-accent mb-0.5 tracking-wider">STEP 3</div>
+          <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-1">買取金額のご提示</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">査定後、買取金額をご提示。納得いただいてからのご判断でOK。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-in delay-4">
+        <div class="step-num">4</div>
+        <div class="flow-step-content">
+          <div class="text-xs font-bold text-brand-accent mb-0.5 tracking-wider">STEP 4</div>
+          <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-1">売買契約</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">金額・条件にご同意いただきましたら、売買契約を締結します。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-in delay-5">
+        <div class="step-num">5</div>
+        <div class="flow-step-content">
+          <div class="text-xs font-bold text-brand-accent mb-0.5 tracking-wider">STEP 5</div>
+          <h3 class="font-bold text-brand-dark text-base sm:text-lg mb-1">お引き渡し・お支払い</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">ご都合に合わせた日程で引き渡し。その場でお支払い（振込）完了です。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-14 fade-in">
+      <a href="#contact" class="btn-cta text-lg px-8 py-4">無料査定を申し込む</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #6  FAQ — よくある質問
+     ============================================================ -->
+<section id="faq" aria-label="よくある質問" class="py-20 md:py-28 bg-white">
+
+  <div class="max-w-2xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-12 fade-in">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title title-deco">よくある質問</h2>
+    </div>
+
+    <!-- Accordion -->
+    <div class="fade-in delay-1">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>査定は本当に無料ですか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          はい、査定・相談はすべて完全無料です。現地への出張費用も一切かかりません。査定後に買取をご依頼いただかなくても費用は発生しませんので、お気軽にご相談ください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>築年数が古い家でも買取してもらえますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          はい、築40年・50年以上の物件でも買取いたします。建物の状態がよくない場合や、雨漏り・シロアリ被害などがある場合でも対応可能ですので、まずはご相談ください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>相続した物件でも相談できますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          はい、相続した不動産の買取にも対応しています。相続登記がまだ済んでいない場合でも、手続きの流れについてご説明しますのでご安心ください。司法書士や税理士との連携もご支援します。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>遠方に住んでいても手続きできますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          できます。遠方にお住まいの方でも、書類のやり取りは郵送・メールで対応いたします。現地確認は当社が代わりに行いますので、佐賀まで来ていただく必要はほとんどありません。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>ローンが残っている物件でも売れますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          はい、住宅ローンが残っている物件でも買取可能なケースが多くあります。買取金額でローンを完済できる場合は通常通り対応でき、残債がある場合でも解決策をご提案しますのでご相談ください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>買取と仲介の違いは何ですか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          仲介は不動産会社が買い手を探す方法で、売却に数ヶ月〜1年以上かかることもあります。買取は当社が直接お買取りするため、最短1週間で現金化が可能です。仲介手数料も不要です。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>査定から買取まで、どれくらいの期間かかりますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          通常、査定から1〜2週間以内に買取金額をご提示し、ご同意いただいてから最短1週間で決済完了です。お急ぎの方のご事情にも対応できますのでご相談ください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>近所に知られずに売却できますか？</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          はい、当社の買取では不動産ポータルサイトへの掲載やチラシ配布などは一切行いません。ご近所の方々に知られることなく、プライバシーを守った形で売却を完了できます。
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+
+    <div class="text-center mt-10 fade-in">
+      <p class="text-gray-500 text-sm mb-4">上記以外にも、どんなことでもお気軽にご相談ください。</p>
+      <a href="#contact" class="btn-cta px-8 py-4">無料で質問する</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #7  COMPANY — 会社紹介
+     ============================================================ -->
+<section id="company" aria-label="会社紹介" class="py-20 md:py-28"
+         style="background-color: #F5F5F0;">
+
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-12 fade-in">
+      <div class="section-label">会社紹介</div>
+      <h2 class="section-title title-deco">私たちについて</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Representative Message -->
+      <div class="fade-in delay-1">
+        <!-- Photo Placeholder -->
+        <div class="w-full aspect-[4/3] rounded-2xl mb-6 flex flex-col items-center justify-center overflow-hidden"
+             style="background: linear-gradient(135deg, #1E3D2A 0%, #2D5A3D 60%, #4A8C5C 100%);"
+             aria-label="代表写真（準備中）">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+          <p class="text-white text-opacity-40 text-sm mt-3">代表写真（準備中）</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <p class="text-sm font-bold text-brand-accent mb-3 tracking-wider">代表よりご挨拶</p>
+          <blockquote class="text-gray-700 leading-relaxed text-base sm:text-lg">
+            「はじめまして。〇〇不動産 代表の田中と申します。佐賀で生まれ育った私は、地元の皆様の<strong class="text-brand-dark">「実家や空き家をどうすればいいか」</strong>という悩みを、ずっと身近に感じてきました。</p>
+            <p class="mt-3 text-gray-700">不動産は複雑に思えるかもしれませんが、私たちが一つひとつわかりやすくご説明します。「難しい」「怖い」という不安は無用です。どうぞお気軽にご連絡ください。」
+          </blockquote>
+          <p class="mt-4 text-sm font-bold text-brand-dark">〇〇不動産 代表　田中 〇〇</p>
+        </div>
+      </div>
+
+      <!-- Company Info Table -->
+      <div class="fade-in delay-2">
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="px-6 py-4 border-b" style="background:#1E3D2A;">
+            <h3 class="font-bold text-white text-base sm:text-lg">会社概要</h3>
+          </div>
+          <table class="company-table">
+            <tbody>
+              <tr><th>会社名</th><td>〇〇不動産（仮）</td></tr>
+              <tr><th>所在地</th><td>〒840-00XX<br>佐賀県佐賀市〇〇町X-XX</td></tr>
+              <tr><th>設立</th><td>2010年4月</td></tr>
+              <tr><th>代表取締役</th><td>田中 〇〇</td></tr>
+              <tr><th>電話番号</th><td><a href="tel:0952-XX-XXXX" class="text-brand-green font-bold hover:underline">0952-XX-XXXX</a></td></tr>
+              <tr><th>営業時間</th><td>9:00〜18:00<br><span class="text-sm text-gray-500">土日・祝日も対応</span></td></tr>
+              <tr><th>免許番号</th><td>佐賀県知事（X）第XXXXX号</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="mt-4 rounded-xl overflow-hidden h-48 flex items-center justify-center"
+             style="background: linear-gradient(135deg, #D0E8D7, #EBF2ED);">
+          <div class="text-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#4A8C5C" class="mx-auto mb-2">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <p class="text-sm text-brand-dark font-bold">地図を表示（準備中）</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     #8  CONTACT — お問い合わせ
+     ============================================================ -->
+<section id="contact" aria-label="お問い合わせ" class="py-20 md:py-28 bg-white">
+
+  <div class="max-w-2xl mx-auto px-5 sm:px-8">
+
+    <!-- Section Title -->
+    <div class="text-center mb-10 fade-in">
+      <div class="section-label">無料相談</div>
+      <h2 class="section-title title-deco">まずはお気軽に<br>ご相談ください</h2>
+      <p class="mt-4 text-gray-600">査定・相談は完全無料。しつこい営業は一切いたしません。</p>
+    </div>
+
+    <!-- Phone CTA Banner -->
+    <div class="phone-cta-banner mb-10 fade-in delay-1">
+      <p class="text-sm font-bold tracking-wider mb-2 opacity-80">電話でのご相談</p>
+      <a href="tel:0952-XX-XXXX"
+         class="text-4xl font-serif-jp font-bold text-white hover:opacity-85 transition-opacity block mb-2">
+        0952-XX-XXXX
+      </a>
+      <p class="text-sm opacity-75">受付時間：9:00〜18:00（土日・祝日も対応）</p>
+    </div>
+
+    <!-- OR Divider -->
+    <div class="flex items-center gap-4 mb-8 fade-in delay-2">
+      <div class="flex-1 h-px bg-gray-200"></div>
+      <span class="text-gray-400 text-sm font-bold px-2">またはフォームでお問い合わせ</span>
+      <div class="flex-1 h-px bg-gray-200"></div>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contact-form" novalidate class="fade-in delay-2" aria-label="お問い合わせフォーム">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label class="form-label" for="name">
+          お名前<span class="badge-required">必須</span>
+        </label>
+        <input type="text" id="name" name="name" class="form-input"
+               placeholder="例：佐賀 花子" autocomplete="name">
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label class="form-label" for="phone">
+          お電話番号<span class="badge-required">必須</span>
+        </label>
+        <input type="tel" id="phone" name="phone" class="form-input"
+               placeholder="例：0952-XX-XXXX" autocomplete="tel">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label class="form-label" for="email">
+          メールアドレス<span class="badge-optional">任意</span>
+        </label>
+        <input type="email" id="email" name="email" class="form-input"
+               placeholder="例：saga@example.com" autocomplete="email">
+      </div>
+
+      <!-- Location -->
+      <div class="form-group">
+        <label class="form-label" for="location">
+          物件の所在地（市区町村）<span class="badge-optional">任意</span>
+        </label>
+        <input type="text" id="location" name="location" class="form-input"
+               placeholder="例：佐賀市、唐津市、鹿島市 など">
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label class="form-label" for="message">
+          ご相談内容<span class="badge-optional">任意</span>
+        </label>
+        <textarea id="message" name="message" rows="5" class="form-textarea"
+                  placeholder="例：築50年の実家を相続したがどうすればよいか相談したい。遠方在住です。"></textarea>
+      </div>
+
+      <!-- Privacy -->
+      <div class="form-group" id="privacy-wrap">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" id="privacy" name="privacy"
+                 class="mt-1 w-5 h-5 accent-brand-green flex-shrink-0">
+          <span class="text-sm text-gray-600 leading-relaxed">
+            <a href="#" class="text-brand-green underline hover:no-underline">個人情報保護方針</a>に同意の上、送信します。
+          </span>
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-cta w-full text-lg py-4 mt-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+        無料で送信する
+      </button>
+
+      <p class="text-xs text-gray-400 text-center mt-4">
+        送信後、2営業日以内に担当者よりご連絡いたします。<br>
+        しつこい営業・勧誘は一切いたしません。
+      </p>
+
+    </form>
+  </div>
+</section>
+
+</main><!-- /main -->
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer style="background: #0D1F13;" class="text-white">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 py-8">
+
+    <div class="flex flex-col md:flex-row md:justify-between gap-8 mb-10">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-9 h-9 bg-brand-green rounded flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22" fill="white"/>
+            </svg>
+          </div>
+          <span class="font-serif-jp font-bold text-lg">〇〇不動産</span>
+        </div>
+        <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55);">
+          佐賀県内の実家・空き家の<br>
+          不動産買取をお手伝いします。
+        </p>
+        <a href="tel:0952-XX-XXXX"
+           class="inline-flex items-center gap-2 mt-4 font-bold text-lg hover:opacity-75 transition-opacity"
+           style="color: #7AB88A;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          0952-XX-XXXX
+        </a>
+      </div>
+
+      <!-- Nav -->
+      <nav aria-label="フッターナビゲーション">
+        <p class="text-xs font-bold tracking-widest mb-3" style="color:rgba(255,255,255,0.4);">メニュー</p>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#features"   class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.65);">買取の特徴</a></li>
+          <li><a href="#comparison" class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.65);">他社との違い</a></li>
+          <li><a href="#flow"       class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.65);">買取の流れ</a></li>
+          <li><a href="#faq"        class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.65);">よくある質問</a></li>
+          <li><a href="#company"    class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.65);">会社紹介</a></li>
+          <li><a href="#contact"    class="hover:text-white transition-colors" style="color:rgba(255,255,255,0.65);">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="border-t pt-6 flex flex-col sm:flex-row sm:justify-between gap-2 text-xs"
+         style="border-color:rgba(255,255,255,0.1); color:rgba(255,255,255,0.35);">
+      <p>© 2024 〇〇不動産 All Rights Reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:opacity-75">プライバシーポリシー</a>
+        <a href="#" class="hover:opacity-75">免責事項</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     FLOATING CTA (Mobile only — shown via CSS)
+     ============================================================ -->
+<div class="floating-cta md:hidden" aria-label="お問い合わせ（固定）">
+  <a href="tel:0952-XX-XXXX"
+     class="bg-brand-green text-white"
+     style="background-color: #2D5A3D; color: white;">
+    📞 電話する
+  </a>
+  <a href="#contact" class="btn-cta" style="flex:1;">無料相談</a>
+</div>
+
+
+<!-- Scroll to Top -->
+<button id="scroll-top" class="opacity-0 pointer-events-none" aria-label="ページトップへ">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
