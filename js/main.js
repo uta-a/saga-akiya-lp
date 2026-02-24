@@ -185,18 +185,18 @@ document.addEventListener('DOMContentLoaded', function () {
       <div style="text-align:center; padding: 3rem 1rem;">
         <div style="
           width: 72px; height: 72px;
-          background: linear-gradient(135deg, #2D5A3D, #4A8C5C);
+          background: linear-gradient(135deg, #888, #aaa);
           border-radius: 50%;
           display: flex; align-items: center; justify-content: center;
           margin: 0 auto 1.25rem;
           font-size: 2rem; color: white;
-        ">✓</div>
-        <h3 style="font-family:'Noto Serif JP',serif; font-size:1.375rem; font-weight:700; color:#2D5A3D; margin-bottom:0.75rem;">
-          送信が完了しました
+        ">!</div>
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:1.375rem; font-weight:700; color:#333; margin-bottom:0.75rem;">
+          デモ表示です
         </h3>
         <p style="color:#666; font-size:1rem; line-height:1.9;">
-          お問い合わせありがとうございます。<br>
-          担当者より2営業日以内にご連絡いたします。
+          こちらはデザインモックのため、実際の送信は行われません。<br>
+          フォームのバリデーション動作の確認用です。
         </p>
       </div>
     `;
